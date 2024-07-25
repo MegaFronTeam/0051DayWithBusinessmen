@@ -1,29 +1,119 @@
 // start .headerBlock
 .headerBlock {
 	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPB: #{rem(46)};
 	// --sTPB: #{rem()}; 
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
 	
-	
-	&__row{
+	position: relative;
+	&__row {
 		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
+		--bs-gutter-y: #{rem(30)};
+	}
 
-	}
-	.section-title{
-		
-	}
-	&__col{
+  &__sub-text {
+    font-size: rem(30);
+    margin-bottom: rem(33);
+  }
+  ul {
+    margin-left: rem(20);
+    margin-bottom: rem(48);
+  }
+  li {
+    margin-bottom: rem(18);
+  }
+  .logo {
+    max-width: 100%;
+  }
 
-	}
-	&__item{
+  .img-girl {
+    max-width: 100%;
+    @include media-breakpoint-up(xl) {
+      transform: translateY(-10%);
+    }
+  }
 
-	}
-	&__slide{
-		height: auto;
-	}
+  .im-bg {
+    position: absolute;
+    top: 0;
+    left: 43vw;
+    max-width: 70vw;
+    z-index: -1;
+  }
+  .im-bg2 {
+    position: absolute;
+    bottom: 0;
+    right: 63vw;
+    max-width: 90vw;
+    z-index: -1;
+  }
+
+  &__inner-wrapper {
+    position: relative;
+    z-index: 1;
+    background: $white;
+    border-radius: rem(60);
+    padding: rem(20);
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+    @include media-breakpoint-up(lg) {
+      padding: rem(55) rem(38) rem(77) rem(52);
+    }
+
+    ul {
+      list-style-type: none;
+      margin-top: rem(20);
+      margin-left: 0;
+      margin-bottom: 0;
+      @include media-breakpoint-up(lg) {
+      max-width: calc(100% - 200px);
+
+      }
+      span {
+        flex-shrink: 0;
+        border-radius: rem(18) rem(4) rem(4) rem(4);
+        text-align: end;
+        display: inline-block;
+        background: $purple;
+        padding-right: rem(6);
+        width: rem(72);
+        height: rem(42);
+        font-weight: 700;
+        font-size: rem(35);
+        color: #fff;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+      margin-bottom: rem(6);
+    }
+  }
+
+  &__inner-title {
+    margin-bottom: rem(52);
+  }
+
+  &__icons-row {
+		--bs-gutter-x: #{rem(0)};
+    border-bottom: 2px solid  #f3f3f3;
+    padding-bottom: rem(40);
+    margin-bottom: rem(40);
+  }
+
+  .star-bg {
+    display: inline-block;
+    text-align: right;
+    margin-left: auto;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      right: rem(14);
+      bottom: rem(14);
+      z-index: -1;
+    }
+  }
 
 	@include media-breakpoint-up(xl) {}
 
@@ -60,6 +150,20 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+
+  .item {
+    display: flex;
+    gap: rem(14);
+    align-items: center;
+
+    img {
+      transform: translateY(-4px);
+    }
+
+    &__text {
+      font-size: rem(25);
+    }
+  }
 
 }
 

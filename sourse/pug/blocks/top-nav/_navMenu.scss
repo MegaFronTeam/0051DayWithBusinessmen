@@ -1,10 +1,11 @@
 .menu{
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 
 		display: flex;
 		text-align: center;
 		@include roww(20px);
-		flex-wrap: wrap;
+    gap: rem(14);
+		// flex-wrap: wrap;
 	}
 
 	list-style: none;
@@ -23,11 +24,15 @@
 	}
 }
 
+.menu-mobile {
+  width: max-content;
+}
+
 
 
 .toggle-menu-mobile {
 	--h: #{em(2)};
-	--color: #{$primary};
+	--color: #{$purple};
 	--position: calc(var(--h) * 2);
 	&.on span {
 		--color: transparent;
@@ -75,7 +80,7 @@
 		transform-origin: 50% 50%;
 	} 
 }
-@include media-breakpoint-down(lg) {
+@include media-breakpoint-down(xl) {
 
 	
 

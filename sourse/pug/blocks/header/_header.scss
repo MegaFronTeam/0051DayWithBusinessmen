@@ -1,7 +1,8 @@
 
 	// start .header
 	.header {
-		 
+    border: 1px solid $gray-800;
+    padding-bottom: rem(16);
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

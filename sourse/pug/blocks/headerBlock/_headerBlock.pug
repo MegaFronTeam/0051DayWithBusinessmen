@@ -2,10 +2,36 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+img('img/headerBlock-bg-1.png').im-bg
+			+img('img/headerBlock-bg-2.png').im-bg2
+			+e.row.row
+				.col-lg-7
+					+b.section-title
+						+img('img/svg/logo.svg').logo
+					+e.sub-text Встречи с владельцами бизнеса, мастер-классы и экскурсии на предприятия для школьников и студентов по всей России
+					ul.text_large
+						li Узнай всё о бизнесе за 1 день: от встречи с успешными предпринимателями до знакомства с внутренними процессами бизнеса!
+						li Полезные рекомендации по выстраиванию своего дела
+						li Экскурсии по топ-предприятиям твоего города
+						li Практические мастер-классы
+					+e.btn.btn.btn-light Подать заявку
+				.col-lg-5
+					+e.img-wrap: +img('img/headerBlock-bg.png').img-girl
+			+e.inner-wrapper
+				+e.inner-title.text-center: h2 Для кого?
+				+e.icons-row.row
+					.col-6
+						+b.item
+							+img('img/svg/hat.svg')
+							+e.text Школьники от 14 до 18 лет
+					.col-6
+						+b.item
+							+img('img/svg/star.svg')
+							+e.text Учащиеся колледжей, вузов, предприимчивая молодёжь от 14 до 35 лет
+				.text_large Благодаря участию в проекте, ты:
+				ul.text_large
+					li #[span 1] Встретишься с крупнейшими представителями бизнеса своего региона
+					li #[span 2] Получишь базовые знания о ведении бизнеса через экскурсии и мастер-классы
+					li #[span 3] Обретёшь единомышленников для совместного старта и развития своего дела
+				+img('img/svg/star-bg.svg').star-bg
 	// end headerBlock

@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js.d-xl-none
 		span
 mixin mob-mnu()
 	-
@@ -22,13 +22,15 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
+				.col.col-xl-auto.z
+					+e.logo(href="/")
+						+img('img/svg/logo.svg').img-1
+						+img('img/svg/rosmol.svg').img-2.d-none.d-lg-inline
+				+e.col.col-auto.col-xl.order-xl-0.order-last
+					.menu-mobile.menu-mobile--js.ms-auto
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
-				.col-auto.d-lg-none
+				.col-auto.d-xl-none.ms-auto
 					+menu-toggle()
 	// end top-nav
