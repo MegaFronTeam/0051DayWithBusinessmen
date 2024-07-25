@@ -15,9 +15,31 @@ $rfs-breakpoint: 1200px !default;
 //   'black': $body-color,
 // ) !default;
 
-$font-family-sans-serif: $default-font, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ; 
 
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+
+@include font-face(
+	'GTEestiProDisplay',
+	$addr + "GTEestiProDisplay/GTEestiProDisplay-Regular",
+	400,
+	$file-formats: $file-format
+);
+@include font-face(
+	'GTEestiProDisplay',
+	$addr + "GTEestiProDisplay/GTEestiProDisplay-Bold",
+	bold,
+	$file-formats: $file-format
+);
+@include font-face(
+	'GTEestiProDisplay',
+	$addr + "GTEestiProDisplay/GTEestiProDisplay-Medium",
+	500,
+	$file-formats: $file-format
+);
+
+
+$font-family-sans-serif: "GTEestiProDisplay", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ; 
+
+$font-family-monospace: "Roboto Flex", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
 
 $link-decoration: inherit;
 
