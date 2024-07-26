@@ -1,9 +1,17 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				+e.col.col-12.col-lg
+					+e.logo(href='/')
+						+img('img/svg/logo-long.svg')
+					+e.link(href='#') Политика конфиденциальности
+					+e.link(href='#') Согласие на обработку данных
+				.col-sm
+					+mnu()
+				+e.social-col.col-sm
+					h5 Социальные сети
+					+e.social-link(href='#') Вконтакте
+				+e.last-col.col-sm-auto
+					h5 Контакты
+					+e.social-link(href='mailto:mikhaylov@business.fadm.gov.ru') mikhaylov@business.fadm.gov.ru
