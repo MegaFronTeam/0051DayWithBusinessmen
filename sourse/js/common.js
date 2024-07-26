@@ -123,7 +123,7 @@ function eventHandler() {
       function flipCard() {
         cardWrap.querySelector('.card').classList.toggle('is-flipped');
       }
-      cardWrap.addEventListener( 'click', flipCard)
+      // cardWrap.addEventListener( 'click', flipCard)
       cardWrap.addEventListener( 'mouseenter', flipCard)
       cardWrap.addEventListener( 'mouseleave', flipCard)
     });
