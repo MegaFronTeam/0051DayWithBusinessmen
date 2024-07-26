@@ -1,0 +1,46 @@
+mixin sEvents(data)
+	// start sEvents
+	+b.SECTION.sEvents.section#sEvents&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Мероприятия
+				.sub-text Более 300 мероприятий, каждое проводится в 3 форматах
+			+e.cards-wrapper
+				+img("img/svg/zig-zag3.svg").zig
+				+flipCard('Встреча с владельцем бизнеса','Ты познакомишься с успешными предпринимателями, задашь волнующие вопросы о росте и развитии бизнеса, откроешь для себя реальные истории и вдохновишься на создание своего дела. Сможешь сделать запрос на наставничество.', '')
+					+img("img/svg/flip-card-bg-1.svg").w
+					+img("img/flip-card-man.png").man
+					+img("img/flip-card-man-bg.png").man-bg.d-none.d-xxl-block
+				+flipCard('Бизнес-экскурсия','Окунись в мир бизнеса через экскурсии по компаниям предпринимателей, где ты сможешь всё потрогать, пощупать и лично у владельцев узнать принципы работы бизнес-процессов.', 'is-flipped')
+					+img("img/svg/star-green.svg").star
+					+img("img/flip-card-2.png").card-2
+				+flipCard('Мастер-класс','Узнай, как на самом деле работает бизнес, участвуй в практических мастер-классах и раскрой свои таланты.', '')
+					+img("img/flip-card-3.png").card-3
+			+e.inner-wrapper
+				+lineCard(1, `Август – сентябрь 2024`)
+				+lineCard(2, `Сентябрь – ноябрь 2024`)
+				.text-center: h3 Выбирай город и посещай мероприятия
+				.btn-wrap.text-center
+					+e.btn.btn.btn-light.btn-light_green(href='#') План-график
+					+e.btn.btn.btn-light.btn-light_green(href='#') Подать заявку
+				+img("img/sEvents-bg.png").events-bg
+	// end sEvents
+
+mixin lineCard(i, text)
+	+b.line-card
+		+e.num-wrap: .num.fw-700= i
+		+e.green.fw-500 Поток
+		+e.text.fw-500= text
+
+mixin flipCard(title, text, classF)
+	+b.flip-card.scene--card
+		.card(class=classF)
+			.card__face.card__face--front
+				if block
+					block
+				+e.descr-wrap
+					+e.title= title
+					+e.icon-wrap: +icon('chevron-right')
+			.card__face.card__face--back
+				+img(`img/svg/line.svg`).line
+				p= text

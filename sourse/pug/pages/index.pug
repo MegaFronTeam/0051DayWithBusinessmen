@@ -9,6 +9,7 @@ include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sPersons/_sPersons.pug
 include ../blocks/sPartners/_sPartners.pug
 include ../blocks/sApply/_sApply.pug
+include ../blocks/sEvents/_sEvents.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -24,6 +25,7 @@ block pagecontent
 	+parts('header')
 	main
 		+headerBlock 
+		+sEvents
 		+sApply
 		+sPersons
 		+sPersons2

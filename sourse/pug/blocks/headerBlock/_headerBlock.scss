@@ -10,7 +10,10 @@
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: #{rem(30)};
+    @include media-breakpoint-up(lg) {
     margin-bottom: rem(40);
+
+    }
     @include media-breakpoint-up(xxl) {
       margin-bottom: 0;
     }
@@ -38,17 +41,20 @@
   .img-girl {
     max-width: 100%;
     width: rem(350);
-    @include media-breakpoint-up(xl) {
-      // transform: translateY(-10%);
+    margin-top: -5%;
+    @include media-breakpoint-up(md) {
       margin-top: -15%;
     }
 
-    @include media-breakpoint-down(xl) {
-      transform: translateY(10%);
+    @include media-breakpoint-up(lg) {
+      width: auto;
+      margin-top: 0;
+      transform: translateY(15%);
     }
 
-    @include media-breakpoint-up(lg) {
-    width: auto;
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(-80);
+      transform: translateY(1%);
     }
   }
 

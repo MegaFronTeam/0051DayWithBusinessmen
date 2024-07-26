@@ -488,6 +488,9 @@ iframe {
   &_orange::after {
     background: $orange;
   }
+  &_green::after {
+    background: $green;
+  }
   &::before {
     content: '';
     position: absolute;

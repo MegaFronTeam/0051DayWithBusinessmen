@@ -423,7 +423,7 @@ class JSCCommon {
 		this.customSelect();
 		this.setScreen();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-		// JSCCommon.animateScroll();
+		JSCCommon.animateScroll();
 
 		// JSCCommon.CustomInputFile();
 	}

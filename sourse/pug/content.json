@@ -1,12 +1,12 @@
 {
 	"nav":[
-		{ "name":"О проекте", "url":"#"},
-		{	"name":"Участникам", "url":"#"},
-		{"name":"Эксперты", "url":"#"},
-		{"name":"Вопросы", "url":"#"} ,
+		{ "name":"О проекте", "url":"#sEvents"},
+		{	"name":"Участникам", "url":"#sApply"},
+		{"name":"Эксперты", "url":"#sPersons"},
+		{"name":"Вопросы", "url":"#sFAQ"} ,
 		{
 			"name":"Контакты", 
-			"url":"#"
+			"url":"#sContact"
 			}
 	],
 	"social":[

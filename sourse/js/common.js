@@ -114,6 +114,21 @@ function eventHandler() {
 			clickable: true, 
 		},
 	});
+
+  /* flip card */
+  const cards = document.querySelectorAll('.flip-card .card');
+  if (cards.length) {
+
+    cards.forEach((card) => {
+      function flipCard() {
+        card.classList.toggle('is-flipped');
+      }
+      card.addEventListener( 'click', flipCard)
+      // card.addEventListener( 'mouseover', flipCard)
+      // card.addEventListener( 'mouseleave', flipCard)
+    });
+  }
+  
 }
 if (document.readyState !== "loading") {
 	eventHandler();
