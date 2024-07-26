@@ -116,16 +116,16 @@ function eventHandler() {
 	});
 
   /* flip card */
-  const cards = document.querySelectorAll('.flip-card .card');
+  const cards = document.querySelectorAll('.flip-card');
   if (cards.length) {
 
-    cards.forEach((card) => {
+    cards.forEach((cardWrap) => {
       function flipCard() {
-        card.classList.toggle('is-flipped');
+        cardWrap.querySelector('.card').classList.toggle('is-flipped');
       }
-      card.addEventListener( 'click', flipCard)
-      // card.addEventListener( 'mouseover', flipCard)
-      // card.addEventListener( 'mouseleave', flipCard)
+      cardWrap.addEventListener( 'click', flipCard)
+      cardWrap.addEventListener( 'mouseenter', flipCard)
+      cardWrap.addEventListener( 'mouseleave', flipCard)
     });
   }
   

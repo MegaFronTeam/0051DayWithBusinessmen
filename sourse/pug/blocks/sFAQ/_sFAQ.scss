@@ -34,6 +34,7 @@
 
 .dd-group {
 	&__item {
+    overflow: hidden;
 		@include mt;
 		background-color: #fff;
 		border-radius: rem(25);
