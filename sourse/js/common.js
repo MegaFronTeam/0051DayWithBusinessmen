@@ -116,64 +116,19 @@ function eventHandler() {
 	});
 
   /* flip card */
-  // const cards = document.querySelectorAll('.flip-card');
-  // if (cards.length) {
-
-  //   cards.forEach((cardWrap) => {
-  //     function flipCard() {
-  //       cardWrap.querySelector('.card').classList.toggle('is-flipped');
-  //     }
-  //     // cardWrap.addEventListener( 'click', flipCard)
-  //     cardWrap.addEventListener( 'mouseenter', flipCard)
-  //     cardWrap.addEventListener( 'mouseleave', flipCard)
-  //   });
-  // }
   const cards = document.querySelectorAll('.flip-card');
-
-// Function to determine if the device is a mobile device
-  function isMobileDevice() {
-    return window.matchMedia("(pointer: coarse)").matches;
-  }
-
   if (cards.length) {
+
     cards.forEach((cardWrap) => {
       function flipCard() {
         cardWrap.querySelector('.card').classList.toggle('is-flipped');
       }
-      
-      if (isMobileDevice()) {
-        cardWrap.addEventListener('click', flipCard);
-      } else {
-        cardWrap.addEventListener('mouseenter', flipCard);
-        cardWrap.addEventListener('mouseleave', flipCard);
-      }
+      // cardWrap.addEventListener( 'click', flipCard)
+      cardWrap.addEventListener( 'mouseenter', flipCard)
+      cardWrap.addEventListener( 'mouseleave', flipCard)
     });
   }
-
-  // Optional: Add a listener to handle changes in media query and update the event listeners accordingly
-  const mediaQuery = window.matchMedia("(pointer: coarse)");
-  mediaQuery.addEventListener('change', () => {
-    const isMobile = mediaQuery.matches;
-    
-    cards.forEach((cardWrap) => {
-      const card = cardWrap.querySelector('.card');
-      const flipCardHandler = () => card.classList.toggle('is-flipped');
-
-      // Remove all event listeners
-      cardWrap.removeEventListener('click', flipCardHandler);
-      cardWrap.removeEventListener('mouseenter', flipCardHandler);
-      cardWrap.removeEventListener('mouseleave', flipCardHandler);
-      
-      // Add appropriate event listeners based on device type
-      if (isMobile) {
-        cardWrap.addEventListener('click', flipCardHandler);
-      } else {
-        cardWrap.addEventListener('mouseenter', flipCardHandler);
-        cardWrap.addEventListener('mouseleave', flipCardHandler);
-      }
-    });
-  });
-
+  
 }
 if (document.readyState !== "loading") {
 	eventHandler();
