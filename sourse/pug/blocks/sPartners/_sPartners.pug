@@ -1,0 +1,19 @@
+mixin sPartners(data)
+	// start sPartners
+	+b.SECTION.sPartners.section#sPartners&attributes(attributes)
+		+img('img/svg/zig-zag.svg').zig-zag
+		.container
+			+b.section-title.text-center
+				h2 Партнёры
+			+e.item
+				+partnerCard('logo.svg')
+				+partnerCard('logo.svg')
+				+partnerCard('logo.svg')
+				+partnerCard('logo.svg')
+				+partnerCard('logo.svg')
+				+partnerCard('rosmol.svg')
+	// end sPartners
+
+mixin partnerCard(logo)
+	+b.partner-card
+		+img(`img/svg/${logo}`)

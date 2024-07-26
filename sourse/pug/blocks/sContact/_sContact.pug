@@ -2,8 +2,12 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
+			+img(`img/contact-bg.png`).img
+			+b.section-title
+				h2 Контакты
+			+b.A.card(href='https://vk.com/rosmolbizclub')
+				+e.descr-wrap
+					+img('img/svg/vk.svg').vk
+					p Вконтакте
+				+img(`img/svg/star-white.svg`).star
 	// end sContact

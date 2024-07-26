@@ -476,3 +476,58 @@ iframe {
 		object-fit: cover;
 	}
 }
+
+
+.btn-light {
+  position: relative;
+  z-index: 1;
+
+  &_purple::after {
+    background: $purple;
+  }
+  &_orange::after {
+    background: $orange;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    background: white;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  @include mt;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    left: 0;
+    top: -9px;
+  }
+
+
+  &:hover::before {
+    background: #d3d4d5;
+  }
+  // --bs-btn-color: #000;
+  --bs-btn-bg: #ffffff;
+  --bs-btn-border-color: white;
+  // --bs-btn-hover-color: #000;
+  // --bs-btn-hover-bg: #d3d4d5;
+  // --bs-btn-hover-border-color: #c6c7c8;
+  // --bs-btn-focus-shadow-rgb: 211, 212, 213;
+  // --bs-btn-active-color: #000;
+  // --bs-btn-active-bg: #c6c7c8;
+  // --bs-btn-active-border-color: #babbbc;
+  // --bs-btn-active-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  // --bs-btn-disabled-color: #000;
+  // --bs-btn-disabled-bg: #f8f9fa;
+  // --bs-btn-disabled-border-color: #f8f9fa;
+}

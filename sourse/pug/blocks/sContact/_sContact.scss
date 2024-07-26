@@ -2,25 +2,70 @@
 	// start .sContact
 	.sContact {
 	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPB: #{rem(140)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-
 	}
+
+  .container {
+    position: relative;
+  }
 	.section-title{
-		
+		color: $white;
 	}
-	&__col{
+	.img {
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%);
+    left: 58vw;
+  }
+	.card {
+    position: relative;
+    display: block;
+    max-width: rem(598);
+    padding: rem(31);
+    min-height: rem(354);
+    background: $green;
+    border-radius: rem(30);
+    border: 1px solid #131313;
 
-	}
-	&__item{
+    display: flex;
+    align-items: end;
 
+    &:hover {
+      filter: brightness(0.95);
+    }
 	}
-	&__slide{
-		height: auto;
-	}
+
+  .vk {
+    margin-bottom: rem(20);
+  }
+
+  .star {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    max-width: 30%;
+  }
+
+  p {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 0;
+    line-height: 1;
+    @include media-breakpoint-up(md) {
+      font-size: 36px;
+    }
+  }
+
+
+  .icon {
+    fill: black;
+    color: black;
+  }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
