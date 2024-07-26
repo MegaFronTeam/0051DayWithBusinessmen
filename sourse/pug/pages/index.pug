@@ -8,6 +8,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/sPersons/_sPersons.pug
 include ../blocks/sPartners/_sPartners.pug
+include ../blocks/sApply/_sApply.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -23,6 +24,7 @@ block pagecontent
 	+parts('header')
 	main
 		+headerBlock 
+		+sApply
 		+sPersons
 		+sPersons2
 		+sFAQ

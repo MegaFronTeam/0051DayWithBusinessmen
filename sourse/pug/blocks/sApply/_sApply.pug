@@ -1,0 +1,39 @@
+mixin sApply(data)
+	// start sApply
+	+b.SECTION.sApply.section#sApply&attributes(attributes)
+		+img('img/svg/zig-zag2.svg').zig-zag
+		.container
+			+b.section-title.text-center
+				h2 Как подать заявку?
+			+e.row.row
+				+e.col.col-lg-7
+					ul.text_large.list_colored.list_colored_green
+						li #[span 1] Зарегистрироваться на платформе Росмолодёжь.Бизнес и подтвердить регистрацию через почту
+						li #[span 2] В разделе «мероприятия» выбрать мероприятие в своём регионе и подать заявку на участие
+						li #[span 3] На мероприятии предъявить организаторам подтверждение регистрации и получить мерч
+				+e.col.col-lg-5
+					+e.img-wrap: +img('img/sApply-img.png').apply
+		.container
+			+e.slider-row.row
+				+e.col.col-12.col-lg-8
+					+e.slider--js
+						+arrow
+						.swiper-wrapper
+							+e.slide.swiper-slide: +sliderCard('1')
+							+e.slide.swiper-slide: +sliderCard('1')
+							+e.slide.swiper-slide: +sliderCard('1')
+							+e.slide.swiper-slide: +sliderCard('1')
+						.swiper-pagination
+				+e.col.col-12.col-lg-4
+					+numberCard('10 000+', 'участников')
+					+numberCard('300+', 'встреч, экскурсий и мастер-классов')
+					+numberCard('89', 'регионов')
+	// end sApply
+
+mixin numberCard(num, text)
+	+b.num-card
+		.num= num
+		p= text
+
+mixin sliderCard(num)
+	+img(`img/sApply-sl-${num}.png`, 'bg')

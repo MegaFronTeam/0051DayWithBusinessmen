@@ -99,6 +99,21 @@ function eventHandler() {
 			clickable: true, 
 		},
 	});
+
+	const applySwiper = new Swiper(".sApply__slider--js", {
+
+		slidesPerView: 1,
+		spaceBetween: 50,
+		navigation: {
+			nextEl: ".sApply__slider--js .swiper-button-next",
+			prevEl: ".sApply__slider--js .swiper-button-prev",
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true, 
+		},
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();

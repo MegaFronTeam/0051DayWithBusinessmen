@@ -1,6 +1,6 @@
 // start .sPersons
 .sPersons {
-	// --sPT: #{rem()};
+	--sPT: #{rem(96)};
 	// --sPB: #{rem()};
 	--sTPB: #{rem(70)};
 	
@@ -10,26 +10,10 @@
 	}
 	.section-title{
 		color: $white;
-    
 	}
   h2 {
     line-height: 1.1;
   }
-	&__col{
-		
-	}
-	&__item{
-		
-	}
-  
-	.card {
-		// height: 100%;
-		&__img-wrap {
-			img {
-				// object-position: top;
-			}
-		}
-	}
   .swiper-wrapper {
     margin-bottom: rem(40);
   }
@@ -51,7 +35,7 @@
   &__slider--js-2 {
     margin: auto;
     overflow: hidden;
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
     max-width: calc(100% - 100px);
     }
 
@@ -86,52 +70,15 @@
     }
   }
 
-  .swiper-pagination-bullet-active {
+  .swiper-pagination-bullet-active,
+  .swiper-pagination-bullet:hover  {
     background-color: black;
   }
 
-  .swiper-pagination-bullet {
-	@include media-breakpoint-up(md) {
-    margin-right: rem(24);
-  }
-  }
 
   .swiper-button-hand {
     top: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    --swiperArrowSize: #{rem(50)};
-    border-color: transparent;
-    .icon {
-      font-size: rem(18);
-      stroke: black;
-      stroke-width: 2px;
-    }
 
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-  }
-  .swiper-button-hand-prev {
-    @include media-breakpoint-down(xxl) {
-      left: 0;
-    }
-    @include media-breakpoint-up(xxl) {
-      transform: translateX(-18px);
-    }
-  }
-
-  .swiper-button-hand-next {
-    @include media-breakpoint-down(xxl) {
-      right: 0;
-    }
-    @include media-breakpoint-up(xxl) {
-      transform: translateX(18px);
-    }
-  }
-  .swiper-button-disabled {
-    opacity: .3;
   }
 
 	@include media-breakpoint-up(xl) {}
@@ -143,6 +90,50 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sPersons
 
+.swiper-button-disabled {
+  opacity: .3;
+}
+
+.swiper-button-hand-prev {
+  @include media-breakpoint-down(xxl) {
+    left: 0;
+  }
+  @include media-breakpoint-up(xxl) {
+    transform: translateX(-18px);
+  }
+}
+
+.swiper-button-hand-next {
+  @include media-breakpoint-down(xxl) {
+    right: 0;
+  }
+  @include media-breakpoint-up(xxl) {
+    transform: translateX(18px);
+  }
+}
+.swiper-pagination-bullet {
+  @include media-breakpoint-up(md) {
+    margin-right: rem(24);
+  }
+}
+
+.swiper-button-hand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --swiperArrowSize: #{rem(50)};
+  border-color: transparent;
+  z-index: 10;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+
+  .icon {
+    font-size: rem(18);
+    stroke: black;
+    stroke-width: 2px;
+  }
+}
 
 #sPersons2 {
 	--sPT: #{rem(2)};
@@ -217,6 +208,7 @@
   border-radius: rem(30);
   color: $white;
   height: 100%;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
 	@include media-breakpoint-up(md) {
     padding: rem(36);
     border-radius: rem(60);
