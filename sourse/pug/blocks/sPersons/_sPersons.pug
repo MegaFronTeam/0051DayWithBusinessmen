@@ -1,0 +1,72 @@
+mixin sPersons(data)
+	// start sPersons
+	+b.SECTION.sPersons.section#sPersons&attributes(attributes)
+		.container
+			+img(`img/svg/star-white.svg`).star
+			+b.section-title.text-center
+				h2 Знакомься, наши<br>предприниматели
+			+e.slider--js
+				+arrow
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+card('Вадим Кульков', 'Краснодарский край', 'Компания «БРОНИРУЙ»')
+					+e.slide.swiper-slide
+						+card('Вадим Кульков', 'Краснодарский край', 'Компания «БРОНИРУЙ»')
+					+e.slide.swiper-slide
+						+card('Вадим Кульков', 'Красноярский край', 'Компания «БРОНИРУЙ» Компания «БРОНИРУЙ»')
+					+e.slide.swiper-slide
+						+card('Вадим Кульков', 'Краснодарский край', 'Компания «БРОНИРУЙ»')
+					+e.slide.swiper-slide
+						+card('Валерия Котова', 'Вологодская область', 'Салон мебели VALERIE')
+					+e.slide.swiper-slide
+						+card('Дмитрий Моисеенко', 'Красноярский край', 'Промтехэкология')
+				.swiper-pagination
+	// end sPersons
+
+
+mixin card(name, city, company)
+	+b.person-card
+		+e.img-wrap.text-center: +img('img/sPersons-img-1.png')
+		+e.content
+			+e.name!= name
+			+e.city
+				+icon('location')
+				| #{city}
+			+e.company!= company
+
+mixin sPersons2(data)
+	// start sPersons
+	+b.SECTION.sPersons.section#sPersons2&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Предприятия
+			+e.slider--js-2
+				+arrow
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+firmCard('mord', 'Саранск', 'Официальный дилер компании «Ростсельмаш». Под собственным брендом «Ростсельмаш» выпускает широкий модельный ряд машин и оборудования для сельскохозяйственных операций – от подготовки почвы до первичной переработки зерна; электронные решения для повышения эффективности сельхозработ и аграрного бизнеса. Продуктовая линейка компании включает в себя более 150 моделей и модификаций 24 типов техники.', 1)
+					+e.slide.swiper-slide
+						+firmCard('mord', 'Саранск', 'Официальный дилер компании «Ростсельмаш». Под собственным брендом «Ростсельмаш» выпускает широкий модельный ряд машин и оборудования для сельскохозяйственных операций – от подготовки почвы до первичной переработки зерна; электронные решения для повышения эффективности сельхозработ и аграрного бизнеса. Продуктовая линейка компании включает в себя более 150 моделей и модификаций 24 типов техники.', 2)
+					+e.slide.swiper-slide
+						+firmCard('mord', 'Саранск', 'Официальный дилер компании «Ростсельмаш». Под собственным брендом «Ростсельмаш» выпускает широкий модельный ряд машин и оборудования для сельскохозяйственных операций', 3)
+					+e.slide.swiper-slide
+						+firmCard('mord', 'Саранск', 'Официальный дилер компании «Ростсельмаш». Под собственным брендом «Ростсельмаш» выпускает широкий модельный ряд машин и оборудования для сельскохозяйственных операций', 4)
+					+e.slide.swiper-slide
+						+firmCard('mord', 'Саранск', 'Официальный дилер компании «Ростсельмаш». Под собственным брендом «Ростсельмаш» выпускает широкий модельный ряд машин и оборудования для сельскохозяйственных операций', 5)
+					+e.slide.swiper-slide
+						+firmCard('mord', 'Саранск', 'Официальный дилер компании «Ростсельмаш». Под собственным брендом «Ростсельмаш» выпускает широкий модельный ряд машин и оборудования для сельскохозяйственных операций', 6)
+				.swiper-pagination
+	// end sPersons
+
+mixin firmCard(name, city, company, i)
+	+b.firm-card
+		+img(`img/svg/line.svg`).line
+		.row
+			+e.content.col-12.col-lg-8
+				+img(`img/svg/${name}.svg`).name
+				+e.city
+					+icon('location')
+					| #{city}
+				+e.company!= company
+			+e.content.col-12.col-lg-4
+				+e.img-wrap: +img(`img/sPersons-firm-${i}.png`)

@@ -59,6 +59,46 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
+
+  
+	const personsSwiper = new Swiper(".sPersons__slider--js", {
+
+		slidesPerView: 1,
+		spaceBetween: 50,
+		navigation: {
+			nextEl: ".sPersons__slider--js .swiper-button-next",
+			prevEl: ".sPersons__slider--js .swiper-button-prev",
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true, 
+		},
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      }
+    }
+	});
+
+    
+	const personsSwiper2 = new Swiper(".sPersons__slider--js-2", {
+
+		slidesPerView: 1,
+		spaceBetween: 50,
+		navigation: {
+			nextEl: ".sPersons__slider--js-2 .swiper-button-next",
+			prevEl: ".sPersons__slider--js-2 .swiper-button-prev",
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true, 
+		},
+	});
 }
 if (document.readyState !== "loading") {
 	eventHandler();

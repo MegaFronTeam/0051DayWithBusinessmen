@@ -6,6 +6,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sFAQ/_sFAQ.pug
+include ../blocks/sPersons/_sPersons.pug
 include ../blocks/sPartners/_sPartners.pug
 
 block variables
@@ -22,6 +23,8 @@ block pagecontent
 	+parts('header')
 	main
 		+headerBlock 
+		+sPersons
+		+sPersons2
 		+sFAQ
 		+sPartners
 		+sContact
