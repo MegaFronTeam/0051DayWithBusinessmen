@@ -226,15 +226,22 @@
   }
 
   .row {
-    align-items: center;
-    align-content: space-between;
+    // align-items: center;
+    // align-content: flex-start;
 		--bs-gutter-y: #{rem(20)};
     height: 100%;
+    @include media-breakpoint-up(md) {
+      align-items: center;
+    }
   }
 
-  .name {
+  // .name {
+  //   margin-bottom: rem(30);
+  //   max-width: 100%;
+  // }
+
+  h3 {
     margin-bottom: rem(30);
-    max-width: 100%;
   }
 
   &__city {
