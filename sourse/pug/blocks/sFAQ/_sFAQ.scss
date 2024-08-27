@@ -22,16 +22,9 @@
 		translate: -50%;
 		bottom: -12%;
 	}
-	&__row {
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-	}
-	.section-title {
-	}
-	&__col {
-	}
-	&__item {
-	}
+	ul {
+    margin-left: rem(20);
+  }
 
 	.dd-group {
 		margin-bottom: rem(25);
@@ -114,8 +107,10 @@
 		}
 		p {
 			max-width: rem(1079);
-			margin-bottom: 0;
 			font-size: rem(16);
 		}
+    p:last-child {
+			margin-bottom: 0;
+    }
 	}
 }

@@ -1,5 +1,5 @@
 /**
- * Swiper Custom Element 11.1.9
+ * Swiper Custom Element 11.1.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: July 31, 2024
+ * Released on: July 24, 2024
  */
 
 (function () {
@@ -353,7 +353,7 @@
   function elementIsChildOf(el, parent) {
     const isChild = parent.contains(el);
     if (!isChild && parent instanceof HTMLSlotElement) {
-      const children = [...parent.assignedElements()];
+      const children = [...element.assignedElements()];
       return children.includes(el);
     }
     return isChild;
@@ -2909,7 +2909,7 @@
       resistanceRatio = 0;
     }
     if (diff > 0) {
-      if (isLoop && allowLoopFix && !loopFixed && data.allowThresholdMove && data.currentTranslate > (params.centeredSlides ? swiper.minTranslate() - swiper.slidesSizesGrid[swiper.activeIndex + 1] - (params.slidesPerView !== 'auto' && swiper.slides.length - params.slidesPerView >= 2 ? swiper.slidesSizesGrid[swiper.activeIndex + 1] + swiper.params.spaceBetween : 0) - swiper.params.spaceBetween : swiper.minTranslate())) {
+      if (isLoop && allowLoopFix && !loopFixed && data.allowThresholdMove && data.currentTranslate > (params.centeredSlides ? swiper.minTranslate() - swiper.slidesSizesGrid[swiper.activeIndex + 1] : swiper.minTranslate())) {
         swiper.loopFix({
           direction: 'prev',
           setTranslate: true,
@@ -2923,7 +2923,7 @@
         }
       }
     } else if (diff < 0) {
-      if (isLoop && allowLoopFix && !loopFixed && data.allowThresholdMove && data.currentTranslate < (params.centeredSlides ? swiper.maxTranslate() + swiper.slidesSizesGrid[swiper.slidesSizesGrid.length - 1] + swiper.params.spaceBetween + (params.slidesPerView !== 'auto' && swiper.slides.length - params.slidesPerView >= 2 ? swiper.slidesSizesGrid[swiper.slidesSizesGrid.length - 1] + swiper.params.spaceBetween : 0) : swiper.maxTranslate())) {
+      if (isLoop && allowLoopFix && !loopFixed && data.allowThresholdMove && data.currentTranslate < (params.centeredSlides ? swiper.maxTranslate() + swiper.slidesSizesGrid[swiper.slidesSizesGrid.length - 1] : swiper.maxTranslate())) {
         swiper.loopFix({
           direction: 'next',
           setTranslate: true,
@@ -5141,7 +5141,6 @@
               lastEventBeforeSnap = newEvent;
               recentWheelEvents.splice(0);
               timeout = nextTick(() => {
-                if (swiper.destroyed || !swiper.params) return;
                 swiper.slideToClosest(swiper.params.speed, true, undefined, snapToThreshold);
               }, 0); // no delay; move on next tick
             }
@@ -5151,7 +5150,6 @@
               // we'll consider a scroll "complete" when there haven't been any wheel events
               // for 500ms.
               timeout = nextTick(() => {
-                if (swiper.destroyed || !swiper.params) return;
                 const snapToThreshold = 0.5;
                 lastEventBeforeSnap = newEvent;
                 recentWheelEvents.splice(0);
@@ -9644,7 +9642,7 @@
   }
 
   /**
-   * Swiper 11.1.9
+   * Swiper 11.1.7
    * Most modern mobile touch slider and framework with hardware accelerated transitions
    * https://swiperjs.com
    *
@@ -9652,7 +9650,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: July 31, 2024
+   * Released on: July 24, 2024
    */
 
 
@@ -9979,7 +9977,7 @@
   }
 
   /**
-   * Swiper Custom Element 11.1.9
+   * Swiper Custom Element 11.1.7
    * Most modern mobile touch slider and framework with hardware accelerated transitions
    * https://swiperjs.com
    *
@@ -9987,7 +9985,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: July 31, 2024
+   * Released on: July 24, 2024
    */
 
 
