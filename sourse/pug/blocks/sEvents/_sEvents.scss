@@ -278,12 +278,6 @@
     }
   }
 
-  &:last-child {
-    .card__face--front {
-      background: $orange;
-    }
-  }
-
   .card__face--back {
     background: $green;
     transform: rotateY(180deg);
@@ -330,11 +324,12 @@
 
   .man {
     position: absolute;
+    max-height: initial !important;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     max-width: 100%;
-    max-height: 90%;
+    // max-height: 90%;
     z-index: -1;
   }
 

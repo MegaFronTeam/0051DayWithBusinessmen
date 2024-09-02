@@ -102,6 +102,8 @@ class JSCCommon {
 				let toggle = event.target.closest(".toggle-menu-mobile--js");
 				if (toggle) this.toggleMenu();
 				if (!container && !toggle) this.closeMenu();
+        let link = event.target.closest(".menu-item"); 
+        if (link) this.closeMenu();
 			},
 			{passive: true}
 		);
